@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f5f7fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-align: center;
+            padding: 48px 20px;
+        }
+
+        header h1 { font-size: 2rem; margin-bottom: 8px; }
+        header p { opacity: 0.9; }
+
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 32px 20px 48px;
+        }
+
+        section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #667eea;
+            color: #444;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        figure {
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f0f2f5;
+        }
+
+        figure img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        figcaption {
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            color: #666;
+            background: #fafbfc;
+        }
+
+        .path-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 6px;
+        }
+
+        .relative { background: #e6f7ff; color: #096dd9; }
+        .absolute { background: #fff7e6; color: #d46b08; }
+
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: #999;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>我的个人博客</h1>
+        <p>Web 开发实验 · 实验二：利用 GitHub 发布个人博客</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>关于我</h2>
+            <p>
+                你好，欢迎访问我的个人博客。本页面使用 HTML 编写，
+                并通过 GitHub Pages 发布。实验重点在于理解网页中
+                <strong>相对路径</strong>与<strong>绝对路径</strong>的区别。
+            </p>
+        </section>
+
+        <section>
+            <h2>我的相册（至少 4 张图片）</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="./images/1.jpg" alt="本地图片1">
+                    <figcaption>
+                        图片 1
+                        <span class="path-tag relative">相对路径 ./images/1.jpg</span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="./images/2.jpg" alt="本地图片2">
+                    <figcaption>
+                        图片 2
+                        <span class="path-tag relative">相对路径 ./images/2.jpg</span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/3.jpg" alt="本地图片3">
+                    <figcaption>
+                        图片 3
+                        <span class="path-tag relative">相对路径 images/3.jpg</span>
+                    </figcaption>
+                </figure>
+
+                <figure>
+                    <img src="https://picsum.photos/seed/exp07-blog/400/300" alt="网络图片">
+                    <figcaption>
+                        图片 4
+                        <span class="path-tag absolute">绝对路径 https://picsum.photos/...</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>最近文章</h2>
+            <ul>
+                <li><strong>HTML 基础入门</strong> — 学习网页结构与常用标签</li>
+                <li><strong>Git 与 GitHub 使用</strong> — 版本控制与 Pages 发布</li>
+                <li><strong>相对路径与绝对路径</strong> — 理解资源引用方式</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 我的个人博客 · 托管于 GitHub Pages</p>
+    </footer>
+</body>
+</html>
